@@ -1,0 +1,66 @@
+<style type="text/css">
+  input, select,a{
+    background:#fff;
+    border:1px solid #2E9AFE;
+    padding:5px;
+  }
+
+  body{
+    background: #CCCCCC;
+  }
+
+  #contenido{
+    background:#fff;
+    margin:20px auto;
+    overflow:hidden;
+    padding:40px ;
+    border:1px solid #2E9AFE;
+    width:90%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  a:-webkit-any-link {
+    color: #2E9AFE;
+    text-decoration: underline;
+    cursor: auto;
+  }
+</style>
+<p id="notice"><%= notice %></p>
+
+<DIV ID="contenido">
+<h1>Autos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Anio</th>
+      <th>Precio</th>
+      <th>Fecha adquisicion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @autos.each do |auto| %>
+      <tr>
+        <td><%= auto.marca %></td>
+        <td><%= auto.modelo %></td>
+        <td><%= auto.anio %></td>
+        <td><%= auto.precio %></td>
+        <td><%= auto.fecha_adquisicion %></td>
+        <td><%= link_to 'Show', auto %></td>
+        <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
+        <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'New Auto', new_auto_path %>
+</DIV>

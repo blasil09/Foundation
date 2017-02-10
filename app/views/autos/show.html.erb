@@ -1,0 +1,56 @@
+<style type="text/css">
+  input, select,a{
+    background:#fff;
+    border:1px solid #2E9AFE;
+    padding:5px;
+  }
+
+  #contenido{
+    background:#fff;
+    margin:20px auto;
+    overflow:hidden;
+    padding:40px ;
+    border:1px solid #2E9AFE;
+    width:90%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  body{
+    background: #CCCCCC;
+  }
+</style>
+
+<DIV ID="contenido">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @auto.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @auto.modelo %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @auto.anio %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @auto.precio %>
+</p>
+
+<p>
+  <strong>Fecha adquisicion:</strong>
+  <%= @auto.fecha_adquisicion %>
+</p>
+
+<%= link_to 'Edit', edit_auto_path(@auto) %> |
+<%= link_to 'Back', autos_path %>
+
+</DIV>

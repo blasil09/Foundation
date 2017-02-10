@@ -1,0 +1,30 @@
+<style type="text/css">
+  input, select,a{
+    background:#fff;
+    border:1px solid #2E9AFE;
+    padding:5px;
+  }
+
+  #contenido{
+    background:#fff;
+    margin:20px auto;
+    overflow:hidden;
+    padding:40px ;
+    border:1px solid #2E9AFE;
+    width:90%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  body{
+    background: #CCCCCC;
+  }
+</style>
+
+<h1>Editing Auto</h1>
+
+<%= render 'form', auto: @auto %>
+
+<%= link_to 'Show', @auto %> |
+<%= link_to 'Back', autos_path %>
